@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 * {
   box-sizing: border-box;
@@ -10,9 +8,31 @@
 
 html {
   scroll-behavior: smooth;
+  background: #0f172a;
 }
 
 body {
   background: #0f172a;
-  color: #fff;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Ensure proper background on all elements */
+#__next {
+  background: #0f172a;
+  min-height: 100vh;
+}
+
+/* Utility classes for gradients */
+.bg-gradient-slate {
+  background: linear-gradient(to bottom, #0f172a, #1e3a5f, #0f172a);
+}
+
+/* Ensure text is visible */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+p {
+  color: #9ca3af;
 }
