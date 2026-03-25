@@ -5,25 +5,25 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-blue-900 to-slate-900 pb-20">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block mb-4 px-4 py-1 bg-red-500/20 border border-red-500/50 rounded-full">
+          <div className="inline-block mb-4 px-4 py-2 bg-red-500/20 border border-red-500/50 rounded-full">
             <span className="text-red-400 text-sm font-medium">🔥 Patent-Pending Technology</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Emergency Financial<br />
-            <span className="text-blue-400">Trigger System</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Trigger System</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-10">
+          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-10 px-4">
             Autonomous financial operations triggered by real-time emergency detection.
             When seconds count, our system acts automatically.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/dashboard" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/dashboard" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-semibold transition shadow-lg shadow-blue-600/25">
               Open Dashboard
             </Link>
             <Link href="/demo" className="px-8 py-4 border border-white/20 hover:bg-white/10 text-white rounded-lg font-semibold transition">
@@ -34,9 +34,9 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-6 bg-slate-800/50">
+      <section className="py-16 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <StatItem value="<5s" label="Detection Time" />
             <StatItem value="99%" label="Accuracy Rate" />
             <StatItem value="24/7" label="Monitoring" />
@@ -46,13 +46,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-4">Key Features</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">Key Features</h2>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
             Advanced emergency detection with autonomous financial response
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard
               icon="🚨"
               title="Autonomous Detection"
@@ -88,10 +88,10 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-6 bg-slate-800/50">
+      <section className="py-20 px-4 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">How It Works</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16">How It Works</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <StepCard number="01" title="Monitor" description="Continuous data from wearables, location, and external feeds" />
             <StepCard number="02" title="Detect" description="ML classification identifies emergency conditions" />
             <StepCard number="03" title="Analyze" description="Context engine determines appropriate response" />
@@ -101,10 +101,10 @@ export default function Home() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Emergency Scenarios</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16">Emergency Scenarios</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <UseCaseCard
               type="Medical Emergency"
               icon="🏥"
@@ -131,26 +131,26 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-blue-600">
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Emergency Protection?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Deploy Emergency Protection?</h2>
           <p className="text-blue-100 text-lg mb-8">
             Contact us to learn more about licensing and integration opportunities.
           </p>
-          <Link href="/contact" className="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition">
+          <Link href="/contact" className="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
             Schedule a Demo
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-gray-400">© 2026 CAEFTS. All rights reserved.</div>
+      <footer className="py-8 px-4 border-t border-white/10">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="text-gray-400 text-sm sm:text-base">© 2026 CAEFTS. All rights reserved.</div>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-white transition">Privacy</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">Terms</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">Security</a>
+            <a href="#" className="text-gray-400 hover:text-white transition text-sm">Privacy</a>
+            <a href="#" className="text-gray-400 hover:text-white transition text-sm">Terms</a>
+            <a href="#" className="text-gray-400 hover:text-white transition text-sm">Security</a>
           </div>
         </div>
       </footer>
@@ -161,8 +161,8 @@ export default function Home() {
 function StatItem({ value, label }: { value: string; label: string }) {
   return (
     <div className="text-center">
-      <div className="text-4xl font-bold text-blue-400 mb-2">{value}</div>
-      <div className="text-gray-400">{label}</div>
+      <div className="text-3xl sm:text-4xl font-bold text-blue-400 mb-2">{value}</div>
+      <div className="text-sm sm:text-base text-gray-400">{label}</div>
     </div>
   );
 }
@@ -171,18 +171,18 @@ function FeatureCard({ icon, title, description }: { icon: string; title: string
   return (
     <div className="p-6 bg-slate-800/50 rounded-xl border border-white/10 hover:border-blue-500/50 transition">
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-400">{description}</p>
+      <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{title}</h3>
+      <p className="text-sm sm:text-base text-gray-400">{description}</p>
     </div>
   );
 }
 
 function StepCard({ number, title, description }: { number: string; title: string; description: string }) {
   return (
-    <div className="relative">
-      <div className="text-6xl font-bold text-blue-500/20 mb-4">{number}</div>
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-400">{description}</p>
+    <div>
+      <div className="text-5xl sm:text-6xl font-bold text-blue-500/20 mb-4">{number}</div>
+      <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{title}</h3>
+      <p className="text-sm sm:text-base text-gray-400">{description}</p>
     </div>
   );
 }
@@ -194,7 +194,7 @@ function UseCaseCard({ type, icon, scenario, actions, color }: { type: string; i
         <span className="text-3xl">{icon}</span>
         <div className={`text-sm font-semibold text-${color}-400`}>{type}</div>
       </div>
-      <p className="text-gray-400 mb-4">{scenario}</p>
+      <p className="text-sm sm:text-base text-gray-400 mb-4">{scenario}</p>
       <ul className="space-y-2">
         {actions.map((action) => (
           <li key={action} className="flex items-center gap-2 text-sm text-gray-300">

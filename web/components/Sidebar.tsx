@@ -25,17 +25,19 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-slate-900 border-r border-slate-700 overflow-y-auto">
-      <div className="p-4">
-        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-4 mb-6">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-white">System Active</span>
+    <aside className="hidden xl:block fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-slate-900 border-r border-slate-700 overflow-y-auto">
+      <div className="p-4 space-y-4">
+        {/* Status Card */}
+        <div className="bg-gradient-to-br from-green-600/20 to-green-800/20 border border-green-500/30 rounded-xl p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-sm font-medium text-green-400">System Online</span>
           </div>
           <div className="text-2xl font-bold text-white">99.9%</div>
-          <div className="text-xs text-blue-200">Uptime this month</div>
+          <div className="text-xs text-gray-400">Uptime this month</div>
         </div>
 
+        {/* Navigation */}
         <nav className="space-y-1">
           {menuItems.map((item) => (
             <div key={item.href}>
@@ -43,7 +45,7 @@ export default function Sidebar() {
                 href={item.href}
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                   pathname === item.href
-                    ? "bg-blue-600 text-white"
+                    ? "bg-blue-600 text-white shadow-lg shadow-blue-600/25"
                     : "text-gray-400 hover:text-white hover:bg-slate-800"
                 }`}
               >
@@ -67,11 +69,15 @@ export default function Sidebar() {
           ))}
         </nav>
 
-        <div className="mt-6 p-4 bg-slate-800 rounded-xl">
-          <div className="text-sm font-medium text-gray-400 mb-2">Need Help?</div>
-          <div className="text-xs text-gray-500 mb-3">Contact our 24/7 support team</div>
-          <Link href="/contact" className="text-sm text-blue-400 hover:text-blue-300">
-            Contact Support →
+        {/* Help Card */}
+        <div className="bg-slate-800 rounded-xl p-4">
+          <div className="text-sm font-medium text-white mb-1">Need Help?</div>
+          <div className="text-xs text-gray-400 mb-3">24/7 support available</div>
+          <Link href="/contact" className="text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1">
+            Contact Support
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </Link>
         </div>
       </div>
